@@ -1,0 +1,138 @@
+.searchContainer {
+  background-color: #ee1b37;
+  color: white;
+  text-align: center;
+  padding: 1rem 0 2.6rem 0;
+}
+
+.searchBarContainer {
+  margin: auto;
+  background-color: white;
+  max-width: 860px;
+  padding: 0.4rem 0.6rem 0.4rem 1rem;
+  border-radius: 10px;
+  border: 4px solid rgb(255, 203, 144);
+}
+
+.allSearchBar {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(136, 136, 136);
+}
+
+.hotelSearch > input {
+  width: 9rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  margin-left: 0.6rem;
+}
+
+.dateSearch > span {
+  margin-left: 0.6rem;
+}
+
+.roomSearch > span {
+  margin-left: 0.6rem;
+}
+
+.searchBtn {
+  background-color: rgb(33, 177, 81);
+  font-size: large;
+  color: white;
+  border-radius: 6px;
+  width: 6rem;
+  height: 3.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: rgb(40, 207, 96);
+}
+
+.dateSearch {
+  position: relative;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 2.2rem;
+  left: -3rem;
+  border-radius: 0.2rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.roomSearch {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.room {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: start;
+  top: 2.2rem;
+  left: 2rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.6);
+  width: 12rem;
+  height: 6rem;
+  z-index: 2;
+}
+
+.roomItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  color: rgb(26, 26, 26);
+}
+
+.optionCounter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.optionCounterText {
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.optionCounterBtn {
+  border-color: rgb(255, 126, 126);
+  border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .date {
+    top: 4.6rem;
+    left: -6rem;
+    z-index: 2;
+  }
+
+  .room {
+    top: 5.3rem;
+    left: -1rem;
+  }
+
+  .allSearchBar {
+    gap: 1rem;
+  }
+
+  .hotelSearch {
+    width: 10rem;
+  }
+}

@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    background-color:rgb(238,27,55);
+    color: white;
+    width: 100vw;
+}
+
+.logo{
+    font-weight: bolder;
+}
+
+.navContainer{
+    height: 3rem;
+    margin: 0 auto;
+    padding: 1.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    font-size: 2rem;
+}
+
+.btn{
+    margin-left: 1rem;
+    border: none;
+    padding: .6rem;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.loggedUser{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

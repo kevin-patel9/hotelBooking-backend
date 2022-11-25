@@ -1,0 +1,115 @@
+.searchListItem{
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.searchListImg{
+    display: flex;
+    align-items: center;
+    padding-left: .4rem;
+}
+
+.listImg{
+    overflow: hidden;
+    border-radius: .2rem;
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.listDesc{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.listDesc>span{
+    font-size: 14px;
+}
+
+.listTitle{
+    margin: .6rem 0;
+    font-size: 20px;
+    color: rgb(0, 96, 175);
+}
+
+.listDetails{
+    flex: 1;
+}
+
+.listTravel{
+    background-color: rgb(0, 170, 9);
+    color: white;
+    padding: .4rem;
+    border-radius: .4rem;
+    width: max-content;
+}
+
+.listAbout{
+    font-weight: bold;
+}
+
+.listCancel{
+    font-size: 1.2rem;
+    font-weight: 800;
+   color: rgb(0, 131, 0);
+}
+
+.listCancelSubtitles{
+    color: rgb(0, 163, 0);
+    
+}
+
+.listDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .6rem;
+}
+
+.listRating{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listRating>span{
+    font-weight: 600;
+}
+
+.listRating>button{
+    background-color: #ec0800 ;
+    color: white;
+    border: none;
+}
+
+.listText{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 1.2rem;
+}
+
+.listAvailButton{
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: #e42019 ;
+    padding: .6rem;
+    color: white;
+    border-radius: .2rem;
+    border: none;
+    width: 100%;
+}
+
+.listPrice{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.listAvailButton:hover{
+    background: #f0352f ;
+}
