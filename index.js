@@ -12,7 +12,7 @@ const cors = require('cors');
 
 
 const corsOptions ={
-    origin:'*', 
+    origin:'https://booking-hotelss.herokuapp.com', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
