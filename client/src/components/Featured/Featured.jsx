@@ -4,7 +4,7 @@ import { useFetch } from '../../hooks/useFetch';
 export const Featured = () => {
 
     const { data, loading, error } = useFetch(
-        "https://hotel-booking12.herokuapp.com/hotels/cityCount?cities=mumbai,chennai,banglore"
+        "https://hotels-booking.herokuapp.com/hotels/cityCount?cities=mumbai,chennai,banglore"
         );
 
     return (
