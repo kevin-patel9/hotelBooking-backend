@@ -13,7 +13,7 @@ export const Home = () => {
         <Header />
         <Search />
             <div className="homeContainer">
-                {/* <Featured /> */}
+                <Featured />
                 <h2 className="homeTitle">Browse By Room Types</h2>
                 <PropertyList />
             </div>
