@@ -8,6 +8,7 @@ const users = require("./routes/user");
 const rooms = require("./routes/room");
 require("dotenv").config();
 const auth = require("./routes/auth");
+const path = require('path');
 
 app.use(cors());
 app.use(cookieParser());
