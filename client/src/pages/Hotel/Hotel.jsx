@@ -20,7 +20,7 @@ export const Hotel = () => {
   const id = location.pathname.split("/")[2];
 
   const { data, loading, error } = useFetch(
-    `https://hotel-booking12.herokuapp.com/hotels/find/${id}`
+    `https://hotels-booking.herokuapp.com/hotels/find/${id}`
   );
 
   const [slideIndex, setSlideIndex] = useState(0);
