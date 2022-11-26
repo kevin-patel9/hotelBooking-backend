@@ -22,9 +22,9 @@ mongoose.connect(process.env.SERVER_IP)
 app.use(express.json())
 
 app.use('/auth', auth )
-app.use('/hotels', hotels )
-app.use('/users', users )
-app.use('/rooms', rooms )
+app.use('/hotel', hotels )
+app.use('/user', users )
+app.use('/room', rooms )
 app.use(function(err, req, res, next){
 
     res.status(500).send("Something Failed");

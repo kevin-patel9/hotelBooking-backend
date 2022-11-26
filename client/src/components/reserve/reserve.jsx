@@ -3,14 +3,14 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import "./reserve.css";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(
-    `https://hotels-booking.herokuapp.com/hotels/room/${hotelId}`
+    `https://hotels-booking.herokuapp.com/hotel/room/${hotelId}`
   );
 
   const booking = useSelector((state) => state.booking);
@@ -58,7 +58,7 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`http://localhost:9000/rooms/availability/${roomId}`, {
+          const res = axiosInstance.put(`/room/availability/${roomId}`, {
             dates: alldates,
           });
           return res.data;
