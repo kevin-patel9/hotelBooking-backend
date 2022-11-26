@@ -10,7 +10,9 @@ require('dotenv').config()
 const auth = require('./routes/auth');
 const path = require('path')
 
-app.use(cors())
+app.use(cors({
+  origin: "*"
+}))
 app.use(cookieParser())
 
 mongoose.connect(process.env.SERVER_IP)
