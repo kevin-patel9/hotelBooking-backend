@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const asyncMiddleware = require('../middleware/asyncMiddleware');
 const verifyToken = require('../middleware/verifyToken');
+const _ = require('lodash')
 
 router.get('/', asyncMiddleware(async (req, res)=> {
 
@@ -10,7 +11,7 @@ router.get('/', asyncMiddleware(async (req, res)=> {
 
     if(!user) return res.status(404).send("OOPS! there is no users in database")
     
-    res.json(user)
+    res.json(_.pick(user,['username', 'email', 'country', 'city', 'phone' ]))
     
 }));
 
