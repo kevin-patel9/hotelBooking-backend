@@ -26,15 +26,23 @@ body{
 }
 
 .btn{
-    margin-left: 1rem;
+    margin-left: .6rem;
     border: none;
     padding: .6rem;
     border-radius: .2rem;
     cursor: pointer;
 }
 
-.loggedUser{
+.loggedUser {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.adminBtn{
+        margin: 0  0 .8rem 1rem;
+        border: none;
+        padding: .6rem;
+        border-radius: .2rem;
+        cursor: pointer;
 }
