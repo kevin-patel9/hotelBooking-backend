@@ -25,7 +25,7 @@ export const Navbar = () => {
         <div className="loggedUser">
           <span>{}</span>
             <h4 style={{margin: "0", fontSize: "1.4rem", fontWeight: "normal" }}>{auth.user.username}</h4>
-            <a href="https://clinquant-muffin-84b7a9.netlify.app" className="adminBtn">Admin Login</a>
+            <a href="https://jolly-mochi-eba040.netlify.app" className="adminBtn">Admin Login</a>
             <button onClick={handleLogout} className="btn" >Logout</button>
         </div>
         </>

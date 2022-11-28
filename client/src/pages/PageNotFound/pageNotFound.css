@@ -1,0 +1,19 @@
+.page {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.page>p{
+    color: rgb(116, 116, 116);
+}
+
+.homeBtn{
+    cursor: pointer;
+    background-color: rgb(255, 51, 51);
+    padding: 0 2rem;
+    border-radius: .4rem;
+    border: none;
+    height: 2.4rem;
+    font-size: 1.2rem;
+    color: white;
+}

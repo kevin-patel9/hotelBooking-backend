@@ -6,6 +6,7 @@ import { store } from "./context/SearchContext";
 import { Provider } from "react-redux";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import { PageNotFound } from "./pages/PageNotFound/pageNotFound";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/hotels/:id" element={<Hotel />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Router>
       </Provider>
