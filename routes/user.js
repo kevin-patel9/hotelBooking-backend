@@ -11,7 +11,7 @@ router.get('/', asyncMiddleware(async (req, res)=> {
 
     if(!user) return res.status(404).send("OOPS! there is no users in database")
     
-    res.json(_.pick(user,['username', 'email', 'country', 'city', 'phone' ]))
+    res.json(user)
     
 }));
 
