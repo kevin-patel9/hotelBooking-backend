@@ -57,6 +57,10 @@
     .featuredTitles>h3{
         color: gray;
     }
+    .featuredTitles>h1{
+        color: gray;
+        background: none;
+    }
     .featuredItem:nth-child(2){
         width: 140%;
     }
