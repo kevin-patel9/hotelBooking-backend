@@ -2,7 +2,7 @@ import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { loginFail, loginStart, loginSuccess } from "../../context/SearchContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { axiosInstance } from "../../config";
 
 export const Login = () => {
@@ -58,6 +58,9 @@ export const Login = () => {
           className="passwordInput"
         />
         <button disabled={auth.loading} onClick={handleClick} className="loginBtn"> Login </button>
+        <Link to="/register" className="signUpLink" >
+          <p>Sign Up</p>
+        </Link>
         {auth.error && <span>{auth.error}</span>}
       </div>
     </div>

@@ -25,15 +25,13 @@ export const Navbar = () => {
         <div className="loggedUser">
           <span>{}</span>
             <h4 style={{margin: "0", fontSize: "1.4rem", fontWeight: "normal" }}>{auth.user.username}</h4>
-            <Link to="https://splendorous-gelato-e546d9.netlify.app">
-            <button className="adminBtn">Admin Login</button>
-            </Link>
+            <a href="https://radiant-arithmetic-033c8d.netlify.app" className="adminBtn">Admin Login</a>
             <button onClick={handleLogout} className="btn" >Logout</button>
         </div>
         </>
         ) : (
           <div className="navItems">
-            <button  className="btn">Register</button>
+            <button onClick={() => navigate("/register")} className="btn">Register</button>
             <button onClick={() => navigate("/login")} className="btn">Login</button>
           </div>
         )}

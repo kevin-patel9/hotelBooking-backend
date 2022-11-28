@@ -32,3 +32,18 @@
     background-color: #0071c28c;
     cursor: not-allowed;
   }
+
+  .passwordInput{
+    padding-left: 1rem;
+    height: 3rem;
+  }
+
+  .signUpLink{
+    display: flex;
+    justify-content: end;
+    font-size: 1.2rem;
+  }
+  
+  .signUpLink>p{
+    margin-top: .4rem;
+  }

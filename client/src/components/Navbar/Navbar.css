@@ -26,9 +26,11 @@ body{
 }
 
 .btn{
+    font-family: inherit;
+    font-size: 1.2rem;
     margin-left: .6rem;
     border: none;
-    padding: .6rem;
+    padding: .2rem .4rem;
     border-radius: .2rem;
     cursor: pointer;
 }
@@ -40,9 +42,10 @@ body{
 }
 
 .adminBtn{
-        margin: 0  0 .8rem 1rem;
-        border: none;
-        padding: .6rem;
-        border-radius: .2rem;
-        cursor: pointer;
+    background-color: #f0f0f0;
+    padding: .2rem .4rem;
+    border-radius: .2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
 }

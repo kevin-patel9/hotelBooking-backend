@@ -56,10 +56,11 @@ const authSlice = createSlice({
     },
       logout: (state, action) => {
         return {
-            user: null,
+            user: localStorage.clear(),
             loading: false,
             error: null
         };
+        
     }
 }
 });

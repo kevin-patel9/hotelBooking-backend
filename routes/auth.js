@@ -23,7 +23,7 @@ router.post('/register', asyncMiddleware (async (req,res)=> {
 
   const token = user.generateAuthToken();
 
-  res.cookie('x_access_token', token).json(_.pick(user, ['username', 'email']));
+  res.cookie('x_access_token', token).json("New User Created");
 }));
 
 router.post('/login', asyncMiddleware(async (req, res) => {
