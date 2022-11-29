@@ -8,7 +8,7 @@ import {
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "../../components/Footer/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -19,8 +19,9 @@ export const Hotel = () => {
 
   const id = location.pathname.split("/")[2];
 
-  const { data, loading, error } = useFetch(
+  const { data, loading, error, refetchData } = useFetch(
     `https://hotels-booking.herokuapp.com/hotel/find/${id}`
+    
   );
 
   const [slideIndex, setSlideIndex] = useState(0);
@@ -91,7 +92,7 @@ export const Hotel = () => {
               />
               <div className="sliderWrap">
                 <img
-                  src={data.photos[slideIndex]}
+                  src={data?.photo[slideIndex]}
                   alt="Hotel Room img"
                   className="sliderImg"
                 />
@@ -108,7 +109,7 @@ export const Hotel = () => {
             <h1 className="hotelTitle">{data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />
-              <span>Elton 125 New York</span>
+              <span className="hotelAdd">{data.address}</span>
             </div>
             <span className="hotelDistance">
               Excellent location - {data.distance}m from center
@@ -123,7 +124,7 @@ export const Hotel = () => {
                   <div key={i} className="hotelImgWrap">
                     <img
                       onClick={() => handleSlideIndex(i)}
-                      src={photo.src}
+                      src={photo}
                       className="hotelImg"
                     />
                   </div>
@@ -132,14 +133,13 @@ export const Hotel = () => {
             </div>
             <div className="hotelDetails">
               <div className="hotelDetailsText">
-                <h1 className="hotelDetailsTitle">Stay in heart of Krakow</h1>
+                <h1 className="hotelDetailsTitle">Description:</h1>
                 <p>{data.desc}</p>
               </div>
               <div className="hotelDetailsPrices">
                 <h1>Perfect for {days}-night stay!</h1>
                 <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laudantium, voluptatum?
+                  Enjoy the great experience at your selective {data?.type}.
                 </span>
                 <h2>
                   <b>${days * data.price * booking.option.room}</b> ({days + 1}{" "}

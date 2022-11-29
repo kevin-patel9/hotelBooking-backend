@@ -21,7 +21,7 @@ export const List = () => {
   const [max, setMax] = useState(undefined);
 
   const minValue = min || 0;
-  const maxValue = max || 0;
+  const maxValue = max || 9999;
 
   const { data, loading, error, refetchData } = useFetch(
     `https://hotels-booking.herokuapp.com/hotel?city=${destination}&min=${minValue}&max=${maxValue}`
