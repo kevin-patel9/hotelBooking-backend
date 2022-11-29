@@ -8,7 +8,7 @@ import {
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "../../components/Footer/Footer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -105,7 +105,7 @@ export const Hotel = () => {
             </div>
           )}
           <div className="hotelWrap">
-            <button className="bookNow">Reserve or Book Now!</button>
+            <button onClick={handleClick} className="bookNow">Reserve or Book Now!</button>
             <h1 className="hotelTitle">{data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />
