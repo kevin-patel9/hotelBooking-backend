@@ -8,7 +8,6 @@ const users = require('./routes/user');
 const rooms = require('./routes/room');
 require('dotenv').config()
 const auth = require('./routes/auth');
-const path = require('path')
 
 app.use(cors({
   origin: "*"
@@ -29,18 +28,6 @@ app.use(function(err, req, res, next){
 
     res.status(500).send("Something Failed");
 });
-
-app.use(express.static(path.join(__dirname, "/client/build")));
-// app.use(express.static(path.join(__dirname, "../admin/build")));
-
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
-
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../admin/build', 'index.html'));
-// });
 
 const port = process.env.PORT || 9000;
 
