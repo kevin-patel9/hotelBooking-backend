@@ -1,14 +1,17 @@
 import { MailList } from "../Mail/Mail";
 import "./Footer.css";
+import { useSelector } from "react-redux";
 
 export const Footer = () => {
+
+  const auth = useSelector((state) => state.auth);
+
   return (
     <div className="footer">
       <div className="footerItem">
-        {/* <div className="footerHeadLine">
-          <h1>World's leading chain of hotels and homes</h1>
-        </div> */}
-        <MailList />
+        {!auth.user && 
+          <MailList />
+         }
         <div className="footerDetails">
           <div className="footerAbout">
             <ul>
